@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Pria Sawit - Game Perkebunan Sawit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Game Screen -->
+        <div id="game-screen">
+            <!-- Background Layers -->
+            <div class="bg-layer sky" id="sky"></div>
+            <div class="bg-layer palm-trees"></div>
+            <div class="ground"></div>
+            <div class="road"></div>
+            
+            <!-- Weather Effect -->
+            <div id="weather-effect"></div>
+            
+            <!-- Farmer -->
+            <div id="farmer">
+                <div class="farmer-shadow"></div>
+                <img src="petani.png" alt="Petani Sawit">
+            </div>
+            
+            <!-- Score Board -->
+            <div id="score-board">
+                <div class="score-item">
+                    <span class="score-icon">🌱</span>
+                    <span>Skor: <span id="current-score">0</span></span>
+                </div>
+                <div class="score-item">
+                    <span class="score-icon">🏆</span>
+                    <span>Rekor: <span id="high-score">0</span></span>
+                </div>
+            </div>
+            
+            <!-- Status Indicator -->
+            <div id="status-indicator"></div>
+            
+            <!-- Dynamic Elements Container -->
+            <div id="game-elements"></div>
+            
+            <!-- Mobile Controls -->
+            <div id="controls">
+                <button class="control-btn" id="left-btn">◀</button>
+                <button class="control-btn" id="right-btn">▶</button>
+            </div>
+        </div>
+        
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <div class="game-title-icon">🌴</div>
+            <h1 class="game-title">PRIA SAWIT</h1>
+            <p class="game-slogan">"Siaga Ambil TBS – Jaga Kualitas Hasil Panen!"</p>
+            
+            <div class="game-instructions">
+                <h3>Cara Bermain:</h3>
+                <p>🌱 Kumpulkan TBS (+5 poin)</p>
+                <p>🦗 Hindari hama (-10 poin)</p>
+                <p>🪵 & 💧 Hindari cabang & genangan air</p>
+                <p>⬅️ ➡️ Geser petani ke kiri/kanan</p>
+            </div>
+            
+            <button class="btn btn-start" id="start-btn">MULAI MAIN</button>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="hidden">
+            <h1 class="game-over-title">GAME OVER</h1>
+            <div class="final-score" id="final-score">0</div>
+            <div class="high-score-label">Rekor Tertinggi: <span id="final-high-score">0</span></div>
+            <div class="new-record hidden" id="new-record">🎉 REKOR BARU! 🎉</div>
+            
+            <div class="educational-message">
+                <p>💡 <strong>Tahukah Anda?</strong></p>
+                <p id="edu-message">Petani sawit bekerja keras setiap hari untuk memenuhi kebutuhan kita akan produk kelapa sawit yang berkelanjutan. TBS yang segar menghasilkan minyak berkualitas tinggi!</p>
+            </div>
+            
+            <button class="btn btn-restart" id="restart-btn">COBA LAGI</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
