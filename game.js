@@ -645,7 +645,7 @@ function setupSoundControls() {
     soundBtn.innerHTML = '🔊';
     soundBtn.style.cssText = `
         position: absolute;
-        top: 10px;
+        top: 50px;
         right: 10px;
         width: 40px;
         height: 40px;
